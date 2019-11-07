@@ -1,0 +1,52 @@
+.movie-preview-wrap {
+    margin: 10px;
+    box-shadow: 0 10px 20px rgb(92, 92, 92);
+    border-radius: 5px;
+    position: relative;
+}
+
+.movie-poster {
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+.movie-title {
+    font-size: 20px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-weight: bold;
+    width: 70%;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.movie-year {
+    font-size: 15px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(27, 123, 202);
+    font-weight: bold;
+    width: 90%;
+    transition: 0.3s;
+    transition-delay: 0.1s;
+    opacity: 0;
+}
+
+.movie-preview-wrap:hover .movie-title {
+    bottom: 50px;
+    opacity: 1;
+}
+
+.movie-preview-wrap:hover .movie-year {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.movie-preview-wrap:hover .movie-poster {
+    filter: brightness(30%);
+}

@@ -1,0 +1,18 @@
+.logo {
+    font-weight: bold;
+    background: #000;
+    display: flex;
+    padding: 10px;
+}
+
+.logo h1 {
+    font-size: 23px;
+    font-weight: bold;
+    color: #eee;
+    margin: 0;
+}
+
+.logo:hover {
+    color: #eee;
+    text-decoration: none;
+}

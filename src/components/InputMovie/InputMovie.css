@@ -1,0 +1,29 @@
+.input-movie {
+    font-size: 25px;
+    border: none;
+    box-shadow: 0 5px 15px #ccc;
+    transition: 0.2s;
+    padding: 20px 40px;
+    width: 400px;
+}
+
+.input-movie:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 5px 15px rgba(91, 156, 185, 0.534);
+}
+
+.input-movie-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.input-movie-search-sign {
+    background: rgb(33, 236, 94);
+    font-size: 2em;
+    line-height: 70px;
+    width: 70px;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 15px #ccc;
+}

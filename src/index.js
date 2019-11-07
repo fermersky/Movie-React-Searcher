@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Root from './Root';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// import 'bootswatch/dist/minty/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+import { createStore, applyMiddleware } from 'redux';
+import { createLogger } from 'redux-logger';
+import rootReducer from './reducers';
+import thunkMiddleware from 'redux-thunk';
+
+const loggerMiddlware = createLogger();
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, loggerMiddlware));
+
+ReactDOM.render(<Root store={store} />, document.getElementById('root'));
+
 serviceWorker.unregister();
