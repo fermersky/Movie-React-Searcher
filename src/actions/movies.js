@@ -50,7 +50,7 @@ export function fetchMovies(movieTitle) {
         // inform state that the API call starts
         dispatch(requestMovies());
 
-        return fetch(`http://www.omdbapi.com/?apikey=26de17e&s=${movieTitle}`)
+        return fetch(`https://www.omdbapi.com/?apikey=26de17e&s=${movieTitle}`)
             .then(respose => respose.json())
             .then(data => {
                 dispatch(recieveMovies(data.Search));
@@ -65,7 +65,7 @@ export function fetchMovie(movieTitle) {
         // inform state that the API call starts
         dispatch(requestMovies());
 
-        return fetch(`http://www.omdbapi.com/?apikey=26de17e&t=${movieTitle}`)
+        return fetch(`https://www.omdbapi.com/?apikey=26de17e&t=${movieTitle}`)
             .then(respose => respose.json())
             .then(data => {
                 dispatch(recieveMovie(data));
